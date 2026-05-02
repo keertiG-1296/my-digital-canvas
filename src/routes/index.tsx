@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Rocket,
   MapPin,
+  ExternalLink,
 } from "lucide-react";
 import portrait from "@/assets/portrait.png";
 
@@ -80,18 +81,24 @@ const projects = [
     tag: "SaaS Dashboard",
     desc: "Real-time analytics platform with custom chart engine and collaborative reports.",
     stack: ["Next.js", "tRPC", "D3"],
+    github: "https://github.com/aria/nimbus",
+    demo: "https://nimbus.aria.dev",
   },
   {
     title: "Hue — Color Tools",
     tag: "Design Utility",
     desc: "An OKLCH-first color palette generator loved by 8k+ designers worldwide.",
     stack: ["React", "Canvas", "OKLCH"],
+    github: "https://github.com/aria/hue",
+    demo: "https://hue.aria.dev",
   },
   {
     title: "Quill CMS",
     tag: "Open Source",
     desc: "Headless CMS with a delightful editor experience and granular permissions.",
     stack: ["TypeScript", "Postgres", "Prisma"],
+    github: "https://github.com/aria/quill",
+    demo: "https://quill.aria.dev",
   },
 ];
 
@@ -210,20 +217,42 @@ function Index() {
       {/* EDUCATION */}
       <section id="education" className="mx-auto max-w-6xl px-6 py-20">
         <SectionTitle eyebrow="03 — Education" title="What I've studied" />
-        <div className="mt-12 space-y-4">
-          {education.map((e) => (
-            <div key={e.role} className="card-elevated rounded-2xl p-6 md:p-8 grid md:grid-cols-[auto_1fr_auto] gap-6 items-start">
-              <div className="h-12 w-12 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center text-accent">
-                <e.icon className="h-5 w-5" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">{e.role}</h3>
-                <p className="text-accent text-sm font-medium mt-1">{e.company}</p>
-                <p className="text-muted-foreground text-sm mt-2 max-w-2xl">{e.desc}</p>
-              </div>
-              <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{e.period}</span>
-            </div>
-          ))}
+        <div className="mt-14 relative">
+          {/* vertical timeline line */}
+          <div
+            className="absolute left-[88px] md:left-[120px] top-2 bottom-2 w-px"
+            style={{ background: "linear-gradient(to bottom, var(--color-accent), transparent)" }}
+            aria-hidden
+          />
+          <ol className="space-y-10">
+            {education.map((e) => (
+              <li key={e.role} className="grid grid-cols-[80px_auto_1fr] md:grid-cols-[112px_auto_1fr] gap-4 md:gap-8 items-start">
+                {/* year column */}
+                <div className="text-right pt-1">
+                  <span className="font-mono text-sm md:text-base font-semibold text-gradient">
+                    {e.period}
+                  </span>
+                </div>
+                {/* timeline node */}
+                <div className="relative flex justify-center pt-1">
+                  <div className="h-4 w-4 rounded-full bg-accent ring-4 ring-accent/20 z-10 glow-pink" />
+                </div>
+                {/* content card */}
+                <div className="card-elevated rounded-2xl p-5 md:p-6 -mt-1">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center text-accent">
+                      <e.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold leading-tight">{e.role}</h3>
+                      <p className="text-accent text-sm font-medium">{e.company}</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm mt-3">{e.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -232,19 +261,46 @@ function Index() {
         <SectionTitle eyebrow="04 — Projects" title="Selected work" />
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {projects.map((p) => (
-            <article key={p.title} className="card-elevated rounded-2xl p-6 group cursor-pointer">
+            <article key={p.title} className="card-elevated rounded-2xl p-6 flex flex-col">
               <div className="flex items-center justify-between">
                 <span className="text-xs uppercase tracking-wider text-accent font-mono">{p.tag}</span>
-                <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                <div className="flex items-center gap-2">
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${p.title} on GitHub`}
+                    className="h-8 w-8 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${p.title} live demo`}
+                    className="h-8 w-8 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
               <h3 className="text-xl font-semibold mt-4">{p.title}</h3>
-              <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
+              <p className="text-sm text-muted-foreground mt-2 flex-1">{p.desc}</p>
               <div className="flex flex-wrap gap-2 mt-5">
                 {p.stack.map((s) => (
                   <span key={s} className="text-xs rounded-full border border-border bg-secondary px-2.5 py-1 text-muted-foreground">
                     {s}
                   </span>
                 ))}
+              </div>
+              <div className="flex items-center gap-4 mt-5 pt-4 border-t border-border/60 text-sm">
+                <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition">
+                  <Github className="h-4 w-4" /> Code
+                </a>
+                <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition ml-auto">
+                  Live demo <ArrowUpRight className="h-4 w-4" />
+                </a>
               </div>
             </article>
           ))}
