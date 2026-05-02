@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Rocket,
   MapPin,
+  ExternalLink,
 } from "lucide-react";
 import portrait from "@/assets/portrait.png";
 
