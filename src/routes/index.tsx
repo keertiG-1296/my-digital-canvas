@@ -55,11 +55,21 @@ const experience = [
     desc: "Built marketing sites and dashboards for early-stage startups across fintech and SaaS.",
     icon: Rocket,
   },
+];
+
+const education = [
   {
     role: "B.Tech, Computer Science",
     company: "NIT Surathkal",
     period: "2017 — 2021",
     desc: "Graduated with honors. Founded the campus design club and led 12 hackathon teams.",
+    icon: GraduationCap,
+  },
+  {
+    role: "Higher Secondary, Science",
+    company: "Delhi Public School",
+    period: "2015 — 2017",
+    desc: "Top 1% in board exams. National finalist in the CBSE coding olympiad.",
     icon: GraduationCap,
   },
 ];
@@ -97,6 +107,7 @@ function Index() {
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
+            <a href="#education" className="hover:text-foreground transition-colors">Education</a>
             <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
             <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
           </div>
@@ -196,9 +207,29 @@ function Index() {
         </div>
       </section>
 
+      {/* EDUCATION */}
+      <section id="education" className="mx-auto max-w-6xl px-6 py-20">
+        <SectionTitle eyebrow="03 — Education" title="What I've studied" />
+        <div className="mt-12 space-y-4">
+          {education.map((e) => (
+            <div key={e.role} className="card-elevated rounded-2xl p-6 md:p-8 grid md:grid-cols-[auto_1fr_auto] gap-6 items-start">
+              <div className="h-12 w-12 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center text-accent">
+                <e.icon className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold">{e.role}</h3>
+                <p className="text-accent text-sm font-medium mt-1">{e.company}</p>
+                <p className="text-muted-foreground text-sm mt-2 max-w-2xl">{e.desc}</p>
+              </div>
+              <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{e.period}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* PROJECTS */}
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
-        <SectionTitle eyebrow="03 — Projects" title="Selected work" />
+        <SectionTitle eyebrow="04 — Projects" title="Selected work" />
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {projects.map((p) => (
             <article key={p.title} className="card-elevated rounded-2xl p-6 group cursor-pointer">
@@ -222,7 +253,7 @@ function Index() {
 
       {/* SKILLS */}
       <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
-        <SectionTitle eyebrow="04 — Skills" title="My toolkit" />
+        <SectionTitle eyebrow="05 — Skills" title="My toolkit" />
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((s) => (
             <div key={s.name} className="card-elevated rounded-xl p-5 flex items-center gap-3">
