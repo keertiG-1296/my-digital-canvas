@@ -20,85 +20,85 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Aria Sharma — Frontend Developer & UI Engineer" },
+      { title: "Keerti Gadigeppagoudar — Backend Developer & AI/ML Engineer" },
       {
         name: "description",
         content:
-          "Portfolio of Aria Sharma, a frontend developer crafting fast, accessible, beautifully designed web experiences.",
+          "Portfolio of Keerti Gadigeppagoudar, a backend and ML engineer building scalable APIs, deep learning pipelines, and computer vision systems with Python, Django, FastAPI, and PyTorch.",
       },
     ],
   }),
 });
 
 const skills = [
-  { name: "React & Next.js", icon: Code2 },
-  { name: "TypeScript", icon: Code2 },
-  { name: "UI / UX Design", icon: Palette },
-  { name: "Tailwind CSS", icon: Sparkles },
-  { name: "Node & APIs", icon: Database },
-  { name: "Framer Motion", icon: Sparkles },
-  { name: "PostgreSQL", icon: Database },
-  { name: "Figma", icon: Palette },
+  { name: "Python", icon: Code2 },
+  { name: "Django & FastAPI", icon: Code2 },
+  { name: "REST APIs", icon: Database },
+  { name: "PyTorch & OpenCV", icon: Sparkles },
+  { name: "scikit-learn", icon: Sparkles },
+  { name: "MySQL & SQLite", icon: Database },
+  { name: "AWS & GCP", icon: Database },
+  { name: "Git & pytest", icon: Code2 },
 ];
 
 const experience = [
   {
-    role: "Senior Frontend Developer",
-    company: "Lumen Labs",
-    period: "2023 — Present",
-    desc: "Leading the design system and shipping product features used by 200k+ users monthly.",
+    role: "Software Engineer Intern",
+    company: "Sarva Suvidhaen Pvt Ltd",
+    period: "Aug 2025 – Nov 2025",
+    desc: "Built and tested production REST APIs using Python and Django across multiple modules — attendance, journey reports, passenger feedback, and more. Wrote unit and integration tests, maintained Swagger/OpenAPI docs, handled cloud data operations on AWS and GCP, and contributed via GitHub pull requests in a team Agile workflow.",
     icon: Briefcase,
-  },
-  {
-    role: "Frontend Engineer",
-    company: "Pixelforge Studio",
-    period: "2021 — 2023",
-    desc: "Built marketing sites and dashboards for early-stage startups across fintech and SaaS.",
-    icon: Rocket,
   },
 ];
 
 const education = [
   {
-    role: "B.Tech, Computer Science",
-    company: "NIT Surathkal",
-    period: "2017 — 2021",
-    desc: "Graduated with honors. Founded the campus design club and led 12 hackathon teams.",
+    degree: "B.E. in Electronics and Communication Engineering",
+    institution: "Jain College of Engineering and Technology (VTU)",
+    period: "2022 — 2026",
+    result: "CGPA: 8.1 / 10",
     icon: GraduationCap,
   },
   {
-    role: "Higher Secondary, Science",
-    company: "Delhi Public School",
-    period: "2015 — 2017",
-    desc: "Top 1% in board exams. National finalist in the CBSE coding olympiad.",
+    degree: "Higher Secondary — Science (PCMS)",
+    institution: "Vidyaniketan PU Science College",
+    period: "2020 — 2022",
+    result: "85.33%",
+    icon: GraduationCap,
+  },
+  {
+    degree: "Secondary School",
+    institution: "M.R Sakhare English Medium School",
+    period: "2010 — 2020",
+    result: "87.84%",
     icon: GraduationCap,
   },
 ];
 
 const projects = [
   {
-    title: "Nimbus Analytics",
-    tag: "SaaS Dashboard",
-    desc: "Real-time analytics platform with custom chart engine and collaborative reports.",
-    stack: ["Next.js", "tRPC", "D3"],
-    github: "https://github.com/aria/nimbus",
-    demo: "https://nimbus.aria.dev",
+    title: "Metal Surface Defect Detection",
+    tag: "Computer Vision / ML",
+    desc: "Two-phase transfer learning CNN pipeline that classifies 6 types of metal surface defects with 99% test accuracy on the NEU benchmark dataset.",
+    stack: ["Python", "PyTorch", "OpenCV", "scikit-learn"],
+    github: "https://github.com/keertiG-1296/metal-detection-system",
+    demo: "",
   },
   {
-    title: "Hue — Color Tools",
-    tag: "Design Utility",
-    desc: "An OKLCH-first color palette generator loved by 8k+ designers worldwide.",
-    stack: ["React", "Canvas", "OKLCH"],
-    github: "https://github.com/aria/hue",
-    demo: "https://hue.aria.dev",
+    title: "MarketMate",
+    tag: "Backend / API",
+    desc: "Scalable vendor marketplace backend with role-based JWT authentication, optimized SQL workflows, and zero privilege escalation under load testing.",
+    stack: ["FastAPI", "MySQL", "JWT", "Python"],
+    github: "https://github.com/keertiG-1296",
+    demo: "",
   },
   {
-    title: "Quill CMS",
-    tag: "Open Source",
-    desc: "Headless CMS with a delightful editor experience and granular permissions.",
-    stack: ["TypeScript", "Postgres", "Prisma"],
-    github: "https://github.com/aria/quill",
-    demo: "https://quill.aria.dev",
+    title: "Smart Traffic Light Controller",
+    tag: "Computer Vision",
+    desc: "Real-time vehicle detection and adaptive signal control system using YOLOv3 inference pipeline, achieving 40% reduction in simulated vehicle wait time.",
+    stack: ["Python", "YOLOv3", "OpenCV"],
+    github: "https://github.com/keertiG-1296/Traffic-Controller",
+    demo: "",
   },
 ];
 
@@ -109,7 +109,7 @@ function Index() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/40">
         <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
           <a href="#top" className="font-display font-bold text-lg tracking-tight">
-            aria<span className="text-gradient">.</span>
+            keerti<span className="text-gradient">.</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
@@ -118,8 +118,8 @@ function Index() {
             <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
             <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
           </div>
-          <a
-            href="#contact"
+          
+           <a href="#contact"
             className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
           >
             Contact <ArrowUpRight className="h-4 w-4" />
@@ -134,32 +134,32 @@ function Index() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-muted-foreground">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              Available for new projects
+              Open to opportunities
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-              Hi, I'm <span className="text-gradient">Aria</span>.
+              Hi, I'm <span className="text-gradient">Keerti</span>.
               <br />
-              I build delightful interfaces.
+              I build scalable backends & ML systems.
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg">
-              Frontend developer & UI engineer crafting fast, accessible, beautifully animated web experiences for ambitious teams.
+              Backend engineer & ML enthusiast crafting production-grade APIs, deep learning pipelines, and computer vision systems with Python, Django, FastAPI, and PyTorch.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
-              <a
-                href="#projects"
+              
+               <a href="#projects"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition glow"
               >
                 See my work <ArrowUpRight className="h-4 w-4" />
               </a>
-              <a
-                href="#contact"
+              
+                <a href="#contact"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold hover:border-primary/50 transition"
               >
                 Get in touch
               </a>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2">
-              <MapPin className="h-4 w-4" /> Based in Bangalore, India
+              <MapPin className="h-4 w-4" /> Based in Hubli, Karnataka — open to remote & relocation
             </div>
           </div>
 
@@ -169,7 +169,7 @@ function Index() {
             <div className="relative w-72 md:w-[26rem] aspect-square rounded-full overflow-hidden border border-primary/30 bg-card/40 backdrop-blur glow">
               <img
                 src={portrait}
-                alt="Illustrated portrait of Aria, smiling and wearing round glasses"
+                alt="Portrait of Keerti Gadigeppagoudar"
                 width={1024}
                 height={1024}
                 className="h-full w-full object-cover"
@@ -184,12 +184,12 @@ function Index() {
         <SectionTitle eyebrow="01 — About" title="A little about me" />
         <div className="mt-10 grid md:grid-cols-3 gap-6 text-muted-foreground leading-relaxed">
           <p className="md:col-span-2 text-lg text-foreground/90">
-            I'm a frontend developer with <span className="text-primary">5+ years</span> of experience turning fuzzy ideas into polished products. I care deeply about typography, motion, performance, and the small details that make software feel alive.
+            I'm a final-year B.E. student and backend engineer with hands-on experience in <span className="text-primary">Python, Django, FastAPI,</span> and REST APIs. I've built and deployed real-world ML pipelines — including a metal defect detection system achieving <span className="text-primary">99% accuracy</span> — and I care deeply about writing clean, tested, production-ready code.
           </p>
           <div className="space-y-4 text-sm">
-            <Stat value="50+" label="Projects shipped" />
-            <Stat value="8k+" label="Designers using my tools" />
-            <Stat value="5y" label="Building for the web" />
+            <Stat value="99%" label="Defect detection accuracy" />
+            <Stat value="3+" label="Backend projects shipped" />
+            <Stat value="8.1" label="CGPA at VTU" />
           </div>
         </div>
       </section>
@@ -218,7 +218,6 @@ function Index() {
       <section id="education" className="mx-auto max-w-6xl px-6 py-20">
         <SectionTitle eyebrow="03 — Education" title="What I've studied" />
         <div className="mt-14 relative">
-          {/* vertical timeline line */}
           <div
             className="absolute left-[88px] md:left-[120px] top-2 bottom-2 w-px"
             style={{ background: "linear-gradient(to bottom, var(--color-accent), transparent)" }}
@@ -226,29 +225,26 @@ function Index() {
           />
           <ol className="space-y-10">
             {education.map((e) => (
-              <li key={e.role} className="grid grid-cols-[80px_auto_1fr] md:grid-cols-[112px_auto_1fr] gap-4 md:gap-8 items-start">
-                {/* year column */}
+              <li key={e.institution} className="grid grid-cols-[80px_auto_1fr] md:grid-cols-[112px_auto_1fr] gap-4 md:gap-8 items-start">
                 <div className="text-right pt-1">
                   <span className="font-mono text-sm md:text-base font-semibold text-gradient">
                     {e.period}
                   </span>
                 </div>
-                {/* timeline node */}
                 <div className="relative flex justify-center pt-1">
                   <div className="h-4 w-4 rounded-full bg-accent ring-4 ring-accent/20 z-10 glow-pink" />
                 </div>
-                {/* content card */}
                 <div className="card-elevated rounded-2xl p-5 md:p-6 -mt-1">
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center text-accent">
                       <e.icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold leading-tight">{e.role}</h3>
-                      <p className="text-accent text-sm font-medium">{e.company}</p>
+                      <h3 className="text-lg font-semibold leading-tight">{e.degree}</h3>
+                      <p className="text-accent text-sm font-medium">{e.institution}</p>
                     </div>
                   </div>
-                  <p className="text-muted-foreground text-sm mt-3">{e.desc}</p>
+                  <p className="text-muted-foreground text-sm mt-3">{e.result}</p>
                 </div>
               </li>
             ))}
@@ -265,8 +261,8 @@ function Index() {
               <div className="flex items-center justify-between">
                 <span className="text-xs uppercase tracking-wider text-accent font-mono">{p.tag}</span>
                 <div className="flex items-center gap-2">
-                  <a
-                    href={p.github}
+                  
+                    <a href={p.github}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`${p.title} on GitHub`}
@@ -274,15 +270,17 @@ function Index() {
                   >
                     <Github className="h-4 w-4" />
                   </a>
-                  <a
-                    href={p.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`${p.title} live demo`}
-                    className="h-8 w-8 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
+                  {p.demo && (
+                    
+                     <a href={p.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${p.title} live demo`}
+                      className="h-8 w-8 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </div>
               <h3 className="text-xl font-semibold mt-4">{p.title}</h3>
@@ -298,9 +296,11 @@ function Index() {
                 <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition">
                   <Github className="h-4 w-4" /> Code
                 </a>
-                <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition ml-auto">
-                  Live demo <ArrowUpRight className="h-4 w-4" />
-                </a>
+                {p.demo && (
+                  <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition ml-auto">
+                    Live demo <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
               </div>
             </article>
           ))}
@@ -332,16 +332,16 @@ function Index() {
               Let's build something <span className="text-gradient">brilliant</span>.
             </h2>
             <p className="text-muted-foreground mt-4 max-w-md mx-auto">
-              Have a project in mind, or just want to say hi? My inbox is always open.
+              Open to backend and ML engineering roles. Have a project or opportunity? My inbox is always open.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href="mailto:hello@aria.dev" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition glow">
-                <Mail className="h-4 w-4" /> hello@aria.dev
+              <a href="mailto:keerti.s.g2020@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition glow">
+                <Mail className="h-4 w-4" /> keerti.s.g2020@gmail.com
               </a>
-              <a href="#" aria-label="GitHub" className="h-11 w-11 rounded-full border border-border flex items-center justify-center hover:border-primary/50 hover:text-primary transition">
+              <a href="https://github.com/keertiG-1296" target="_blank" rel="noreferrer" aria-label="GitHub" className="h-11 w-11 rounded-full border border-border flex items-center justify-center hover:border-primary/50 hover:text-primary transition">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="h-11 w-11 rounded-full border border-border flex items-center justify-center hover:border-primary/50 hover:text-primary transition">
+              <a href="https://www.linkedin.com/in/keertig" aria-label="LinkedIn" className="h-11 w-11 rounded-full border border-border flex items-center justify-center hover:border-primary/50 hover:text-primary transition">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -350,7 +350,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border/40 py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Aria Sharma. Crafted with care.
+        © {new Date().getFullYear()} Keerti Gadigeppagoudar. Crafted with care.
       </footer>
     </main>
   );
