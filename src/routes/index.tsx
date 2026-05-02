@@ -206,9 +206,29 @@ function Index() {
         </div>
       </section>
 
+      {/* EDUCATION */}
+      <section id="education" className="mx-auto max-w-6xl px-6 py-20">
+        <SectionTitle eyebrow="03 — Education" title="What I've studied" />
+        <div className="mt-12 space-y-4">
+          {education.map((e) => (
+            <div key={e.role} className="card-elevated rounded-2xl p-6 md:p-8 grid md:grid-cols-[auto_1fr_auto] gap-6 items-start">
+              <div className="h-12 w-12 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center text-accent">
+                <e.icon className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold">{e.role}</h3>
+                <p className="text-accent text-sm font-medium mt-1">{e.company}</p>
+                <p className="text-muted-foreground text-sm mt-2 max-w-2xl">{e.desc}</p>
+              </div>
+              <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{e.period}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* PROJECTS */}
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
-        <SectionTitle eyebrow="03 — Projects" title="Selected work" />
+        <SectionTitle eyebrow="04 — Projects" title="Selected work" />
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {projects.map((p) => (
             <article key={p.title} className="card-elevated rounded-2xl p-6 group cursor-pointer">
