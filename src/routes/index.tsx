@@ -55,11 +55,21 @@ const experience = [
     desc: "Built marketing sites and dashboards for early-stage startups across fintech and SaaS.",
     icon: Rocket,
   },
+];
+
+const education = [
   {
     role: "B.Tech, Computer Science",
     company: "NIT Surathkal",
     period: "2017 — 2021",
     desc: "Graduated with honors. Founded the campus design club and led 12 hackathon teams.",
+    icon: GraduationCap,
+  },
+  {
+    role: "Higher Secondary, Science",
+    company: "Delhi Public School",
+    period: "2015 — 2017",
+    desc: "Top 1% in board exams. National finalist in the CBSE coding olympiad.",
     icon: GraduationCap,
   },
 ];
