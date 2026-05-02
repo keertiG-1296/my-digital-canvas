@@ -252,7 +252,7 @@ function Index() {
 
       {/* SKILLS */}
       <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
-        <SectionTitle eyebrow="04 — Skills" title="My toolkit" />
+        <SectionTitle eyebrow="05 — Skills" title="My toolkit" />
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((s) => (
             <div key={s.name} className="card-elevated rounded-xl p-5 flex items-center gap-3">
