@@ -107,6 +107,7 @@ function Index() {
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
+            <a href="#education" className="hover:text-foreground transition-colors">Education</a>
             <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
             <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
           </div>
