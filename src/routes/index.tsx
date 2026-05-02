@@ -80,18 +80,24 @@ const projects = [
     tag: "SaaS Dashboard",
     desc: "Real-time analytics platform with custom chart engine and collaborative reports.",
     stack: ["Next.js", "tRPC", "D3"],
+    github: "https://github.com/aria/nimbus",
+    demo: "https://nimbus.aria.dev",
   },
   {
     title: "Hue — Color Tools",
     tag: "Design Utility",
     desc: "An OKLCH-first color palette generator loved by 8k+ designers worldwide.",
     stack: ["React", "Canvas", "OKLCH"],
+    github: "https://github.com/aria/hue",
+    demo: "https://hue.aria.dev",
   },
   {
     title: "Quill CMS",
     tag: "Open Source",
     desc: "Headless CMS with a delightful editor experience and granular permissions.",
     stack: ["TypeScript", "Postgres", "Prisma"],
+    github: "https://github.com/aria/quill",
+    demo: "https://quill.aria.dev",
   },
 ];
 
