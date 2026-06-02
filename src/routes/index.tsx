@@ -56,7 +56,7 @@ const education = [
     degree: "B.E. in Electronics and Communication Engineering",
     institution: "Jain College of Engineering and Technology (VTU)",
     period: "2022 — 2026",
-    result: "CGPA: 8.1 / 10",
+    result: "CGPA: 8.21 / 10",
     icon: GraduationCap,
   },
   {
@@ -159,7 +159,7 @@ function Index() {
               </a>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2">
-              <MapPin className="h-4 w-4" /> Based in Hubli, Karnataka — open to remote & relocation
+              <MapPin className="h-4 w-4" /> Based in Bengaluru, Karnataka — open to remote & relocation
             </div>
           </div>
 
@@ -184,7 +184,7 @@ function Index() {
         <SectionTitle eyebrow="01 — About" title="A little about me" />
         <div className="mt-10 grid md:grid-cols-3 gap-6 text-muted-foreground leading-relaxed">
           <p className="md:col-span-2 text-lg text-foreground/90">
-            I'm a final-year B.E. student and backend engineer with hands-on experience in <span className="text-primary">Python, Django, FastAPI,</span> and REST APIs. I've built and deployed real-world ML pipelines — including a metal defect detection system achieving <span className="text-primary">99% accuracy</span> — and I care deeply about writing clean, tested, production-ready code.
+           Technical and detail-oriented graduate with hands-on experience in <span className="text-primary">Python, Django, FastAPI,</span> and REST APIs. I've built and deployed real-world ML pipelines — including a metal defect detection system achieving <span className="text-primary">99% accuracy</span> — and I care deeply about writing clean, tested, production-ready code.
           </p>
           <div className="space-y-4 text-sm">
             <Stat value="99%" label="Defect detection accuracy" />
