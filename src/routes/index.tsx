@@ -137,7 +137,7 @@ function Index() {
               Open to opportunities
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-              Hi, I'm <span  className="text-white">Keerti</span>.
+              Hi, I'm <span  className="text-white">Keerti</span>
               <br />
               I build scalable backends & ML systems.
             </h1>
