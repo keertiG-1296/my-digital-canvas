@@ -109,7 +109,7 @@ function Index() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/40">
         <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
           <a href="#top" className="font-display font-bold text-lg tracking-tight">
-            keerti<span className="text-gradient">.</span>
+            Keerti<span className="text-gradient"> G</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
@@ -350,7 +350,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border/40 py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Keerti Gadigeppagoudar. Crafted with care.
+        © {new Date().getFullYear()} Keerti Gadigeppagoudar. 
       </footer>
     </main>
   );
