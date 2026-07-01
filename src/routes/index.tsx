@@ -109,7 +109,7 @@ function Index() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/40">
         <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
           <a href="#top" className="font-display font-bold text-lg tracking-tight">
-            Keerti<span className="text-gradient">G</span>
+            Keerti<span className="text-white"> G</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
@@ -137,7 +137,7 @@ function Index() {
               Open to opportunities
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-              Hi, I'm <span className="text-gradient">Keerti</span>.
+              Hi, I'm <span  className="text-white">Keerti</span>.
               <br />
               I build scalable backends & ML systems.
             </h1>
